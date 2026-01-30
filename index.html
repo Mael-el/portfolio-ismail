@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mael | Étudiant en Mathématiques Informatiques Appliquées</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="firebase.js"></script>
+</head>
+<body>
+    <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.8.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.8.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCXl5O51Y0cDfojxUz4hThgr9p0ilszuV0",
+    authDomain: "mael-f999b.firebaseapp.com",
+    projectId: "mael-f999b",
+    storageBucket: "mael-f999b.firebasestorage.app",
+    messagingSenderId: "694386828382",
+    appId: "1:694386828382:web:e94efb4eeeae4ef20280cf",
+    measurementId: "G-53SE78Z12N"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+    <!-- Navigation -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">MI<span>A</span></a>
+                <div class="nav-links" id="navLinks">
+                    <a href="#home">Accueil</a>
+                    <a href="#about">À Propos</a>
+                    <a href="#skills">Expertise</a>
+                    <a href="#projects">Projets</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section avec Photo -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="badge">ÉTUDIANT L2 MIA</div>
+                    <h1>Je suis <span class="highlight">AGOHOUNDJE Ismail</span></h1>
+                    <h2 class="subtitle">Passionné par les Mathématiques & l'Informatique</h2>
+                    <p class="description">Étudiant en Mathématiques Informatiques Appliquées, je combine rigueur analytique et créativité technique pour résoudre des problèmes complexes. Spécialisé en analyse, cybersécurité et développement d'applications.</p>
+                    
+                    <div class="stats">
+                        <div class="stat-item">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label">Projets Réalisés</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">5</div>
+                            <div class="stat-label">Domaines Maîtrisés</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Passion</div>
+                        </div>
+                    </div>
+
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fas fa-rocket"></i> Voir mes Projets
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="fas fa-paper-plane"></i> Me Contacter
+                        </a>
+                    </div>
+
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <div class="image-container">
+                        <!-- REMPLACEZ CETTE URL PAR VOTRE PHOTO -->
+                        <img src="ismail.jpeg" alt="Ismail" class="profile-photo">
+                        <div class="photo-frame"></div>
+                        
+                        <!-- Badges flottants autour de la photo -->
+                        <div class="floating-badge badge-cyber">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Cybersécurité</span>
+                        </div>
+                        <div class="floating-badge badge-math">
+                            <i class="fas fa-calculator"></i>
+                            <span>Mathématiques</span>
+                        </div>
+                        <div class="floating-badge badge-dev">
+                            <i class="fas fa-code"></i>
+                            <span>Développement</span>
+                        </div>
+                        <div class="floating-badge badge-ml">
+                            <i class="fas fa-brain"></i>
+                            <span>Machine Learning</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">À Propos de <span class="highlight">Moi</span></h2>
+                <p class="section-subtitle">Mon parcours académique et mes passions</p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3>Formation</h3>
+                    <p><strong>Licence 2 en Mathématiques Informatiques Appliquées</strong></p>
+                    <p>Université d'abomey-calavi</p>
+                    <p class="note">Spécialisation : Analyse Mathématique, Algorithmique, Cybersécurité</p>
+                </div>
+
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Passions</h3>
+                    <ul class="passions-list">
+                        <li><i class="fas fa-chart-line"></i> Analyse Mathématique</li>
+                        <li><i class="fas fa-brain"></i> Intelligence Artificielle</li>
+                        <li><i class="fas fa-shield-alt"></i> Cybersécurité</li>
+                        <li><i class="fas fa-mobile-alt"></i> Développement Mobile</li>
+                        <li><i class="fas fa-database"></i> Data Science</li>
+                        <li><i class="fas fa-gamepad"></i> Développement de Jeux</li>
+                    </ul>
+                </div>
+
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Objectifs</h3>
+                    <p><strong>Court terme :</strong> Stage en cybersécurité ou data science</p>
+                    <p><strong>Long terme :</strong> Expert en sécurité des systèmes IA</p>
+                    <div class="quote">
+                        <i class="fas fa-quote-left"></i>
+                        <p>Transformer des problèmes complexes en solutions élégantes</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline académique -->
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2026 - Présent</div>
+                    <div class="timeline-content">
+                        <h4>Licence 2 MIA</h4>
+                        <p>Spécialisation en analyse algorithmique et sécurité informatique</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025</div>
+                    <div class="timeline-content">
+                        <h4>Projets Personnels</h4>
+                        <p>Développement d'applications mobiles et initiation au pentesting</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2024</div>
+                    <div class="timeline-content">
+                        <h4>Licence 1</h4>
+                        <p>Fondamentaux en mathématiques et programmation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Mes <span class="highlight">Expertises</span></h2>
+                <p class="section-subtitle">Domaines techniques et compétences</p>
+            </div>
+
+            <div class="skills-grid">
+                <!-- Cybersécurité -->
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <div class="skill-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Cybersécurité</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Wireshark</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 85%"></div>
+                            </div>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Pentesting</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 80%"></div>
+                            </div>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Hacking Éthique</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 75%"></div>
+                            </div>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Développement -->
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <div class="skill-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Développement</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Mobile (Android/Flutter)</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 90%"></div>
+                            </div>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Web (HTML/CSS/JS)</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 85%"></div>
+                            </div>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 95%"></div>
+                            </div>
+                            <span class="skill-percent">95%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Science -->
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <div class="skill-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Data & IA</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Machine Learning</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 70%"></div>
+                            </div>
+                            <span class="skill-percent">70%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Data Analysis</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 75%"></div>
+                            </div>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">TensorFlow/PyTorch</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 65%"></div>
+                            </div>
+                            <span class="skill-percent">65%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mathématiques -->
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <div class="skill-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h3>Mathématiques</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Analyse</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 95%"></div>
+                            </div>
+                            <span class="skill-percent">95%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Algèbre/Logique</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 90%"></div>
+                            </div>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Statistiques</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 85%"></div>
+                            </div>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Mes <span class="highlight">Projets</span></h2>
+                <p class="section-subtitle">Réalisations techniques et applications</p>
+            </div>
+
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="cyber">Cybersécurité</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="math">Maths</button>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Projet 1 - Calculatrice -->
+                <div class="project-card" data-category="mobile">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1587145820266-a5951ee6f620?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Calculatrice Scientifique">
+                        <div class="project-tag">Mobile</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Calculatrice Scientifique Avancée</h3>
+                        <p>Application mobile avec fonctions mathématiques complexes, graphiques et résolution d'équations différentielles.</p>
+                        <div class="project-tech">
+                            <span>Flutter</span>
+                            <span>Dart</span>
+                            <span>Math Engine</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Démo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 2 - Gestion Tâches -->
+                <div class="project-card" data-category="mobile">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Gestionnaire de Tâches">
+                        <div class="project-tag">Mobile</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>TaskFlow - Gestionnaire Intelligent</h3>
+                        <p>Application de productivité avec IA intégrée pour la priorisation automatique des tâches et suggestions intelligentes.</p>
+                        <div class="project-tech">
+                            <span>Android</span>
+                            <span>Kotlin</span>
+                            <span>Firebase</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Démo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 3 - Analyse Réseau -->
+                <div class="project-card" data-category="cyber">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Analyse Réseau">
+                        <div class="project-tag">Cybersécurité</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Network Guardian</h3>
+                        <p>Outil d'analyse réseau avec Wireshark pour la détection d'intrusions et l'analyse de paquets en temps réel.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Wireshark</span>
+                            <span>Pentesting</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 4 - Jeux Éducatifs -->
+                <div class="project-card" data-category="mobile">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Jeux Mathématiques">
+                        <div class="project-tag">Mobile</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>MathGames Suite</h3>
+                        <p>Collection de jeux éducatifs pour apprendre les mathématiques de manière ludique avec système de progression.</p>
+                        <div class="project-tech">
+                            <span>Unity</span>
+                            <span>C#</span>
+                            <span>Game Design</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Démo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 5 - Visualiseur Maths -->
+                <div class="project-card" data-category="math">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Visualiseur Mathématique">
+                        <div class="project-tag">Mathématiques</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>MathVisual 3D</h3>
+                        <p>Visualiseur interactif de fonctions mathématiques en 3D avec calculs de dérivées et intégrales en temps réel.</p>
+                        <div class="project-tech">
+                            <span>Three.js</span>
+                            <span>JavaScript</span>
+                            <span>Math.js</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Démo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 6 - Site Portfolio -->
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Portfolio Web">
+                        <div class="project-tag">Web</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Portfolio Dynamique</h3>
+                        <p>Site portfolio moderne avec animations, gestion de contenu dynamique et design responsive.</p>
+                        <div class="project-tech">
+                            <span>HTML/CSS</span>
+                            <span>JavaScript</span>
+                            <span>GSAP</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Démo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contactez-<span class="highlight">Moi</span></h2>
+                <p class="section-subtitle">Disponible pour collaborations et opportunités</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Recherche de Stage</h3>
+                        <p>Disponible pour un stage de 2-3 mois à partir de Mai 2026</p>
+                        <p class="contact-detail"><strong>Domaines :</strong> Cybersécurité, Data Science, Développement</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <p>ismailagohoundje14@gmail.com</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Localisation</h3>
+                        <p>Ita, Bénin</p>
+                        <p class="contact-detail">Disponible pour travail à distance</p>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://github.com/Mael-el" class="social-btn"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="https://www.linkedin.com/in/ismail-agohoundje-92374b39a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                        <a href="#" class="social-btn"><i class="fab fa-twitter"></i> Twitter</a>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Votre Nom</label>
+                            <input type="text" id="name" placeholder="John Doe" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Votre Email</label>
+                            <input type="email" id="email" placeholder="john@example.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Sujet</label>
+                            <select id="subject" required>
+                                <option value="">Sélectionnez un sujet</option>
+                                <option value="stage">Proposition de stage</option>
+                                <option value="projet">Collaboration projet</option>
+                                <option value="freelance">Mission freelance</option>
+                                <option value="question">Question technique</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Votre Message</label>
+                            <textarea id="message" rows="5" placeholder="Décrivez votre projet ou opportunité..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <i class="fas fa-paper-plane"></i> Envoyer le Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">AGOHOUNDJE Ismail</a>
+                    <p class="footer-tagline">Étudiant passionné • Mathématiques × Informatique</p>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#home">Accueil</a>
+                    <a href="#about">À Propos</a>
+                    <a href="#skills">Expertises</a>
+                    <a href="#projects">Projets</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                
+                <div class="footer-cta">
+                    <p>Intéressé par mon profil ?</p>
+                    <a href="#contact" class="btn btn-outline">Travaillons ensemble</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ismail. Tous droits réservés.</p>
+                <p>Étudiant en Licence 2 Mathématiques Informatiques Appliquées</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Messages</title>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getFirestore, collection, getDocs, query, orderBy, doc, updateDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+        
+        const firebaseConfig = {
+            // Même config que firebase.js
+        };
+        
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        
+        async function loadMessages() {
+            const messagesRef = collection(db, "messages");
+            const q = query(messagesRef, orderBy("timestamp", "desc"));
+            const querySnapshot = await getDocs(q);
+            
+            const container = document.getElementById('messages-container');
+            container.innerHTML = '';
+            
+            querySnapshot.forEach((doc) => {
+                const data = doc.data();
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `message-card ${data.read ? 'read' : 'unread'}`;
+                messageDiv.innerHTML = `
+                    <div class="message-header">
+                        <h3>${data.name} - ${data.subject}</h3>
+                        <span class="message-date">${data.timestamp?.toDate().toLocaleDateString('fr-FR')}</span>
+                    </div>
+                    <p class="message-email">${data.email}</p>
+                    <p class="message-content">${data.message}</p>
+                    <button onclick="markAsRead('${doc.id}')" class="${data.read ? 'read-btn' : 'unread-btn'}">
+                        ${data.read ? '✓ Lu' : 'Marquer comme lu'}
+                    </button>
+                `;
+                container.appendChild(messageDiv);
+            });
+        }
+        
+        window.markAsRead = async (id) => {
+            await updateDoc(doc(db, "messages", id), {
+                read: true
+            });
+            loadMessages();
+        };
+        
+        loadMessages();
+    </script>
+    <style>
+        /* Styles pour le panneau admin */
+    </style>
+</head>
+<body>
+    <h1>Messages reçus</h1>
+    <div id="messages-container"></div>
+</body>
+</html>
